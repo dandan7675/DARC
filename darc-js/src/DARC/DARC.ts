@@ -10,6 +10,7 @@ export type InitParam = {
   provider?: ethers.providers.Provider;
 }
 
+
 export type TokenInfo = {
   votingWeight: BigInt,
   dividendWeight: BigInt,
@@ -23,6 +24,7 @@ export type MemberInfo = {
   name: string,
   role: bigint
 }
+
 
 /**
  * The DARC class is used to interact with the DARC contract.
@@ -61,12 +63,7 @@ export class DARC {
     if (this.wallet === undefined){
       throw new Error("Wallet is not provided for this DARC instance.");
     }
-    try{
-      await this.darcContract.entrance(program);
-    }
-    catch(e){
-      console.log("Error when running the program: " + e);
-    }
+    await this.darcContract.entrance(program);
   }
 
   /**

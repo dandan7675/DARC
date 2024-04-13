@@ -6,9 +6,21 @@ The project is currently in the early stages of development and is not yet ready
 
 English | [简体中文](./README_cn.md) | [日本語](./README_ja.md)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=project-darc/darc&type=Date)](https://star-history.com/#project-darc/darc&Date)
+
+
 ## Join our community
 
 Telegram: [https://t.me/projectdarc](https://t.me/projectdarc)
+Discord: [https://discord.gg/QzKbTHVgGG](https://discord.gg/QzKbTHVgGG)
+
+## Whitepaper
+
+English: [darc-whitepaper.pdf](https://github.com/Project-DARC/DARC-whitepaper/blob/release/darc-whitepaper.pdf)
+
+Chinese(中文版): [darc-whitepaper-cn.pdf](https://github.com/Project-DARC/DARC-whitepaper/blob/release/darc-whitepaper-cn.pdf)
 
 ## What is DARC?
 
@@ -68,7 +80,7 @@ can add a new plugin and corresponding voting rule to the DARC VM contract:
 add_voting_rule(  // add a voting rule (as index 5)
     [
         {
-            voting_class: [1], // voting token class: 1, level-1 token ownners (board of directors) are required to vote
+            voting_class: [1], // voting token class: 1, level-1 token owners (board of directors) are required to vote
             approve_percentage: 99,  // 99% voting power is required to approve
             voting_duration: 3600,  // voting duration: 1 hour (3600 seconds)
             execute_duration: 3600,  // pending duration for execution: 1 hour (3600 seconds)
@@ -497,7 +509,7 @@ Since Hardhat and OpenZeppelin are used, the project can be built using the foll
    friendly.
 
     ```shell
-    cd darc-protocal
+    cd darc-protocol
     npm install
     ```
 

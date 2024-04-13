@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Getting Started
 
-## What is the DARC Protocol?
+### What is the DARC Protocol?
 
-## Building the source
+### Building the source
 
 Since Hardhat and OpenZeppelin are used, the project can be built using the following commands:
 
@@ -18,7 +18,7 @@ Since Hardhat and OpenZeppelin are used, the project can be built using the foll
    friendly.
 
     ```shell
-    cd darc-protocal
+    cd darc-protocol
     npm install
     ```
 
@@ -28,21 +28,37 @@ Since Hardhat and OpenZeppelin are used, the project can be built using the foll
     npx hardhat compile
     ```
 
-3. Run the Darc test network
+3. Host a local devnet node with hardhat configuration:
 
     ```shell
-    npm run node
+    npx hardhat node
     ```
 
 4. Test contracts
 
     ```shell
-    npx hardhat test
-    REPORT_GAS=true npm run test
+    REPORT_GAS=true npx hardhat test --network localhost
     ```
 
-5. Deploy contracts
+### Deploy
 
-    ```shell
-    npm run deploy
-    ```
+To deploy the DARC protocol, you can use the following commands:
+
+```shell
+npx hardhat run scripts/deploy.js --network <YOUR_NETWORK>
+```
+
+If you want to deploy the DARC protocol to the local devnet, you can use the following command:
+
+
+```shell
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+Make sure you have a local devnet node running before deploying the DARC protocol.
+
+If you want to deploy the DARC protocol to the Ethereum mainnet, you can use the following command:
+
+```shell
+npx hardhat run scripts/deploy.js --network mainnet
+```
